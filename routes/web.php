@@ -14,4 +14,6 @@ use App\Http\Controllers\datosController;
 |
 */
 
-Route::get('/', [datosController::class, 'returnDatos']);
+Route::get('/personajes', [datosController::class, 'returnDatos']);
+
+Route::get('/planetas', [datosController::class, 'returnPlanetas']);
