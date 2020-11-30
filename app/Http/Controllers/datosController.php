@@ -17,4 +17,11 @@ class datosController extends Controller
     {
         return planetas::all();
     }
+
+    public function returnPersonaje($id){
+        return personajes::find($id);
+    }
+    public function returnPlaneta($id){
+        return planetas::find($id);
+    }
 }

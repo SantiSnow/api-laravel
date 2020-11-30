@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\datosController;
-
+use App\Models\personajes;
+use App\Http\Controllers\insertController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,9 @@ use App\Http\Controllers\datosController;
 Route::get('/personajes', [datosController::class, 'returnDatos']);
 
 Route::get('/planetas', [datosController::class, 'returnPlanetas']);
+
+Route::get('/personaje/{id}', [datosController::class, 'returnPersonaje']);
+
+Route::get('/planeta/{id}', [datosController::class, 'returnPlaneta']);
+
+Route::post('/personaje', [insertController::class, 'insertPersonaje']);
